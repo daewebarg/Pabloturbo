@@ -623,8 +623,8 @@ body {
     max-width: 100%;
     max-height: 45px;
     object-fit: contain;
-    filter: grayscale(100%) brightness(180%);
-    opacity: 0.75;
+    filter: none; /* Eliminado el blanco y negro y brillo */
+    opacity: 1;   /* Subido al 100% de opacidad para mayor nitidez */
 }
 
 @keyframes scrollInfinite {
