@@ -980,3 +980,126 @@ body {
         padding: 20px;
     }
 }
+
+
+/* ==========================================
+   SECCIÓN: NUESTROS TRABAJOS (COLLAGE)
+   ================================---------- */
+.trabajos-section {
+    background-color: #050505;
+    padding: 100px 5%;
+    color: #ffffff;
+    border-top: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+.trabajos-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.trabajos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.trabajos-subtitle {
+    display: inline-block;
+    color: #e50914;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.trabajos-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.trabajos-intro {
+    max-width: 420px;
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Grilla tipo Collage Asimétrico */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 16px;
+}
+
+.collage-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #0b0b0b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+/* Efecto al posarse (Hover) */
+.collage-item:hover {
+    z-index: 5;
+    border-color: #e50914;
+    box-shadow: 0 12px 35px rgba(229, 9, 20, 0.35);
+}
+
+.collage-item:hover img {
+    transform: scale(1.12); /* Se agranda la foto */
+}
+
+/* Tamaños destacados para darle forma de collage dinámico a las 11 fotos */
+.collage-item.item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.collage-item.item-tall {
+    grid-row: span 2;
+}
+
+.collage-item.item-wide {
+    grid-column: span 2;
+}
+
+/* Responsivo para tablets y celulares */
+@media (max-width: 1024px) {
+    .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+    }
+    .collage-item.item-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .collage-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+    .collage-item.item-large,
+    .collage-item.item-tall,
+    .collage-item.item-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
