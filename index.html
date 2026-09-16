@@ -533,119 +533,130 @@
         </div>
 
         <!-- Columna Derecha: El Formulario -->
-        <form class="formulario-box" action="#" method="POST">
-            <div class="form-grid">
-                
-                <!-- Nombre y Apellido -->
-                <div class="form-group full-width">
-                    <label for="nombre">Nombre y Apellido *</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
-                </div>
+        <form class="formulario-box" action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST">
+    <div class="form-grid">
+        
+        <!-- Nombre y Apellido -->
+        <div class="form-group full-width">
+            <label for="nombre">Nombre y Apellido *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+        </div>
 
-                <!-- Localidad -->
-                <div class="form-group">
-                    <label for="localidad">Localidad *</label>
-                    <input type="text" id="localidad" name="localidad" required>
-                </div>
+        <!-- Teléfono de contacto -->
+        <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp *</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 3567-0686" required>
+        </div>
 
-                <!-- Ubicación de la embarcación -->
-                <div class="form-group">
-                    <label for="ubicacion">Ubicación de la embarcación *</label>
-                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Guardería, amarra, domicilio..." required>
-                </div>
+        <!-- Correo Electrónico -->
+        <div class="form-group">
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+        </div>
 
-                <!-- Tipo de embarcación -->
-                <div class="form-group">
-                    <label for="tipo-embarcacion">Tipo de embarcación *</label>
-                    <input type="text" id="tipo-embarcacion" name="tipo_embarcacion" placeholder="Lancha, crucero, gomón..." required>
-                </div>
+        <!-- Localidad -->
+        <div class="form-group">
+            <label for="localidad">Localidad *</label>
+            <input type="text" id="localidad" name="localidad" placeholder="Ej: San Fernando" required>
+        </div>
 
-                <!-- Marca y modelo -->
-                <div class="form-group">
-                    <label for="marca-modelo">Marca y modelo *</label>
-                    <input type="text" id="marca-modelo" name="marca_modelo" required>
-                </div>
+        <!-- Ubicación de la embarcación -->
+        <div class="form-group">
+            <label for="ubicacion">Ubicación de la embarcación *</label>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Guardería, amarra, domicilio..." required>
+        </div>
 
-                <!-- Tipo de motor -->
-                <div class="form-group">
-                    <label for="tipo-motor">Tipo de motor *</label>
-                    <select id="tipo-motor" name="tipo_motor" required>
-                        <option value="" disabled selected>Seleccionar</option>
-                        <option value="Fuera de borda">Fuera de borda</option>
-                        <option value="Dentro-fuera (Pata)">Dentro-fuera (Pata)</option>
-                        <option value="Línea de eje">Línea de eje</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-                </div>
+        <!-- Tipo de embarcación -->
+        <div class="form-group">
+            <label for="tipo-embarcacion">Tipo de embarcación *</label>
+            <input type="text" id="tipo-embarcacion" name="tipo_embarcacion" placeholder="Lancha, crucero, gomón..." required>
+        </div>
 
-                <!-- Marca del motor -->
-                <div class="form-group">
-                    <label for="marca-motor">Marca del motor *</label>
-                    <input type="text" id="marca-motor" name="marca_motor" placeholder="Yamaha, Mercury, Evinrude..." required>
-                </div>
+        <!-- Marca y modelo -->
+        <div class="form-group">
+            <label for="marca-modelo">Marca y modelo *</label>
+            <input type="text" id="marca-modelo" name="marca_modelo" placeholder="Ej: Bermuda Classic" required>
+        </div>
 
-                <!-- Potencia -->
-                <div class="form-group">
-                    <label for="potencia">Potencia</label>
-                    <input type="text" id="potencia" name="potencia" placeholder="Ej: 90 HP">
-                </div>
+        <!-- Tipo de motor -->
+        <div class="form-group">
+            <label for="tipo-motor">Tipo de motor *</label>
+            <select id="tipo-motor" name="tipo_motor" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="Fuera de borda">Fuera de borda</option>
+                <option value="Dentro-fuera (Pata)">Dentro-fuera (Pata)</option>
+                <option value="Línea de eje">Línea de eje</option>
+                <option value="Otro">Otro</option>
+            </select>
+        </div>
 
-                <!-- Año aproximado -->
-                <div class="form-group">
-                    <label for="anio">Año aproximado</label>
-                    <input type="number" id="anio" name="anio" placeholder="Ej: 2018">
-                </div>
+        <!-- Marca del motor -->
+        <div class="form-group">
+            <label for="marca-motor">Marca del motor *</label>
+            <input type="text" id="marca-motor" name="marca_motor" placeholder="Yamaha, Mercury, Volvo Penta..." required>
+        </div>
 
-                <!-- Número de serie (opcional) -->
-                <div class="form-group">
-                    <label for="serial">Número de serie (opcional)</label>
-                    <input type="text" id="serial" name="serial">
-                </div>
+        <!-- Potencia -->
+        <div class="form-group">
+            <label for="potencia">Potencia</label>
+            <input type="text" id="potencia" name="potencia" placeholder="Ej: 90 HP">
+        </div>
 
-                <!-- Situación actual -->
-                <div class="form-group">
-                    <label for="situacion">Situación actual *</label>
-                    <select id="situacion" name="situacion" required>
-                        <option value="" disabled selected>Seleccionar</option>
-                        <option value="En el agua (navegando)">En el agua (navegando)</option>
-                        <option value="En guardería / cama">En guardería / cama</option>
-                        <option value="En tierra / remolque">En tierra / remolque</option>
-                        <option value="Varada / emergencia">Varada / emergencia</option>
-                    </select>
-                </div>
+        <!-- Año aproximado -->
+        <div class="form-group">
+            <label for="anio">Año aproximado</label>
+            <input type="number" id="anio" name="anio" placeholder="Ej: 2018">
+        </div>
 
-                <!-- Servicio requerido -->
-                <div class="form-group full-width">
-                    <label for="servicio">Servicio requerido *</label>
-                    <select id="servicio" name="servicio" required>
-                        <option value="" disabled selected>Seleccionar</option>
-                        <option value="Diagnóstico de fallas">Diagnóstico de fallas</option>
-                        <option value="Motores fuera de borda">Motores fuera de borda</option>
-                        <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
-                        <option value="Sistemas eléctricos">Sistemas eléctricos</option>
-                        <option value="Cambio de fluidos">Cambio de fluidos</option>
-                        <option value="Auxilio en agua">Auxilio en agua</option>
-                        <option value="Transmisión y pata">Transmisión y pata</option>
-                        <option value="Pre-compra">Pre-compra</option>
-                    </select>
-                </div>
+        <!-- Número de serie (opcional) -->
+        <div class="form-group">
+            <label for="serial">Número de serie (opcional)</label>
+            <input type="text" id="serial" name="serial" placeholder="Ej: 6H1-10523">
+        </div>
 
-                <!-- Descripción del problema -->
-                <div class="form-group full-width">
-                    <label for="descripcion">Descripción del problema *</label>
-                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detallá los síntomas, ruidos, códigos de falla o lo que necesites..." required></textarea>
-                </div>
+        <!-- Situación actual -->
+        <div class="form-group">
+            <label for="situacion">Situación actual *</label>
+            <select id="situacion" name="situacion" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="En el agua (navegando)">En el agua (navegando)</option>
+                <option value="En guardería / cama">En guardería / cama</option>
+                <option value="En tierra / remolque">En tierra / remolque</option>
+                <option value="Varada / emergencia">Varada / emergencia</option>
+            </select>
+        </div>
 
-                <!-- Botón Enviar -->
-                <div class="form-group full-width">
-                    <button type="submit" class="btn-enviar">
-                        <span>ENVIAR CONSULTA</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </div>
+        <!-- Servicio requerido -->
+        <div class="form-group full-width">
+            <label for="servicio">Servicio requerido *</label>
+            <select id="servicio" name="servicio" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="Diagnóstico de fallas / Escaneo">Diagnóstico de fallas / Escaneo</option>
+                <option value="Reparación y restauración de patas">Reparación y restauración de patas</option>
+                <option value="Carburación e inyección">Carburación e inyección</option>
+                <option value="Service anual / preventivo">Service anual / preventivo</option>
+                <option value="Motores internos (Diésel / Nafta)">Motores internos (Diésel / Nafta)</option>
+                <option value="Inspección pre-compra">Inspección pre-compra</option>
+                <option value="Otro servicio">Otro servicio</option>
+            </select>
+        </div>
 
-            </div>
-        </form>
+        <!-- Descripción del problema -->
+        <div class="form-group full-width">
+            <label for="descripcion">Descripción del problema *</label>
+            <textarea id="descripcion" name="descripcion" rows="4" placeholder="Detallá los síntomas, ruidos, códigos de falla o lo que necesites..." required></textarea>
+        </div>
+
+        <!-- Botón Enviar -->
+        <div class="form-group full-width">
+            <button type="submit" class="btn-enviar">
+                <span>ENVIAR CONSULTA</span>
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+</form>
 
     </div>
 </section>
