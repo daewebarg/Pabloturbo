@@ -57,3 +57,41 @@ const observer = new IntersectionObserver((entries, observerInstance) => {
 document.querySelectorAll('.scroll-reveal').forEach(section => {
     observer.observe(section);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const collageImages = document.querySelectorAll('.collage-item img');
+    const modal = document.getElementById('lightbox-modal');
+    const modalImg = document.getElementById('lightbox-img');
+    
+    // Crear botón de cerrar si no está en el HTML o asegurarnos de que funcione
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    collageImages.forEach(img => {
+        img.addEventListener('click', () => {
+            modal.classList.add('active');
+            modalImg.src = img.src;
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        modalImg.src = '';
+    };
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', (e) => {
+        if (e.target !== modalImg) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+});
