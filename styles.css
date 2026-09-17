@@ -1130,7 +1130,7 @@ body {
 /* Contenedor de Videos en formato vertical */
 .trabajos-videos-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas lado a lado en laptop/desktop */
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas lado a lado en laptop/desktop */
     gap: 20px;
     margin-top: 96px;
     max-width: 650px; /* Ajusta el ancho total para que no queden demasiado grandes */
